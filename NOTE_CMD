@@ -1,0 +1,30 @@
+
+npx expo run:android --no-build-cache
+npx expo run:ios --no-build-cache
+npx expo prebuild
+
+# Build app release iOS 
+npx expo run:ios --configuration Release
+
+# Build app release Android 
+npx expo run:android --variant release
+
+# Build .aab Android 
+cd android
+./gradlew bundleRelease
+
+# Push update
+eas update --channel production --message "1.4.14"
+
+# From project root
+watchman watch-del-all
+rm -rf node_modules
+rm -rf android/app/build
+rm -rf android/.gradle
+rm -rf android/build
+yarn cache clean
+yarn install
+cd android
+./gradlew clean
+cd ..
+yarn react-native start --reset-cache

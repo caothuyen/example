@@ -1,0 +1,64 @@
+{
+  "expo": {
+    "name": "Quốc Duy App",
+    "slug": "QuocDuyApp",
+    "version": "1.4.14",
+    "runtimeVersion": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "icon": "./assets/images/icon.png",
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#349EFC"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.quocduygroup.app",
+      "infoPlist": {
+        "CADisableMinimumFrameDurationOnPhone": true
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundImage": "./assets/images/adaptive-bg.png"
+      },
+      "package": "com.quocduy.quocduyapp"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "99c0f468-9a33-489b-ae99-97e993a1ab64"
+      }
+    },
+    "updates": {
+      "url": "https://u.expo.dev/99c0f468-9a33-489b-ae99-97e993a1ab64",
+      "requestHeaders": {
+        "expo-channel-name": "production"
+      },
+      "assetPatternsToBeBundled": ["**"]
+    },
+    "plugins": [
+      [
+        "expo-font",
+        {
+          "fonts": [
+            "./assets/fonts/Roboto-Black.ttf",
+            "./assets/fonts/Roboto-BlackItalic.ttf",
+            "./assets/fonts/Roboto-Bold.ttf",
+            "./assets/fonts/Roboto-BoldItalic.ttf",
+            "./assets/fonts/Roboto-Italic.ttf",
+            "./assets/fonts/Roboto-Light.ttf",
+            "./assets/fonts/Roboto-LightItalic.ttf",
+            "./assets/fonts/Roboto-Medium.ttf",
+            "./assets/fonts/Roboto-MediumItalic.ttf",
+            "./assets/fonts/Roboto-Regular.ttf",
+            "./assets/fonts/Roboto-Thin.ttf",
+            "./assets/fonts/Roboto-ThinItalic.ttf"
+          ]
+        }
+      ]
+    ]
+  }
+}
